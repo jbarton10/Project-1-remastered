@@ -20,6 +20,9 @@ $("#ytForm").on('submit', function (e) {
     return false;
     $("#resutls").empty();
 });
+
+
+
 function init() {
     console.log(gapi.client);
     console.log('Search Started');
@@ -30,3 +33,4 @@ function init() {
         isLoad = true;
     });
     console.log('Search Request');
+}
