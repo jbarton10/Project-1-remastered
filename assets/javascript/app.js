@@ -19,7 +19,7 @@ $(".movie-screen").css("display", "none");
 
 $(".lucky-button").on("click", function (event) {
   event.preventDefault()
-  console.log('clicked')
+
   $(".feeling_lucky").css("display", "inline");
   $(".titlePage").css("display", "none");
   $(".movie-screen").css("display", "none");
@@ -43,7 +43,7 @@ $(".searchButton").on("click", function (e) {
 //Function for clicking the "Feeling Lcuky" Button at the top of the screen
 $(".lucky-button").on("click", function (event) {
   event.preventDefault()
-  console.log('clicked')
+
   $(".feeling_lucky").css("display", "inline");
   $(".titlePage").css("display", "none");
   $(".movie-screen").css("display", "none");
@@ -183,14 +183,10 @@ $(".searchButton").on("click", function (e) {
 
 // start youtube api call
 
-// var ranMovie = displayMovie(randomMovie[i]);
-
-
-
 $(".movieCat").on("click", function (e) {
   e.preventDefault();
-  // ranMovie = $("#movieName").text();
-  console.log("genre clicked" + ranMovie)
+
+
   var request = gapi.client.youtube.search.list({
     kind: "youtube#searchResult",
     part: "snippet",
@@ -203,7 +199,7 @@ $(".movieCat").on("click", function (e) {
   // execute request
   request.execute(function (response) {
     var str = response.result;
-    console.log(str)
+
 
     $.each(response.result.items, function (index, item) {
       $(".movie-trailer-video").empty();
@@ -216,7 +212,7 @@ $(".movieCat").on("click", function (e) {
 
 $(".searchButton").on("click", function (e) {
   e.preventDefault();
-  console.log("clickedfff")
+
   var request = gapi.client.youtube.search.list({
     kind: "youtube#searchResult",
     part: "snippet",
@@ -229,7 +225,7 @@ $(".searchButton").on("click", function (e) {
   // execute request
   request.execute(function (response) {
     var str = response.result;
-    console.log(str)
+
 
     $.each(response.result.items, function (index, item) {
       $(".movie-trailer-video").empty();
